@@ -45,4 +45,4 @@ steps:
     azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
     appType: 'webApp'
     WebAppName: 'prueba03'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'

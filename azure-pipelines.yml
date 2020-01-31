@@ -27,7 +27,7 @@ steps:
     SonarCloud: SonarCloud
     organization: sonarexamples01
     projectKey: sonarexamples01
-    projectName: sonarexamples01
+    projectName: sonarexamples02
   continueOnError: true
 
 - task: VSBuild@1

@@ -62,7 +62,7 @@ steps:
 
 - task: OwaspZapScan@2
   inputs:
-    ZapApiUrl: 'myMaquinaV:8080'
+    ZapApiUrl: 'localhost:8080'
     ZapApiKey: 'nfkp1fpno06bgt0oo7lj7c8qu6'
     TargetUrl: 'https://prueba03.azurewebsites.net/'
 

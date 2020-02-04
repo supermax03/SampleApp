@@ -72,10 +72,10 @@ steps:
 
 - bash: echo This script could use $SYSTEM_ACCESSTOKEN
   env:
-      SYSTEM_ACCESSTOKEN: $(Build.ArtifactStagingDirectory)
-- powershell: Write-Host "This is a script that could use $env:$(Build.ArtifactStagingDirectory)"
+      SYSTEM_ACCESSTOKEN: $(Build.Repository.LocalPath)
+- powershell: Write-Host "This is a script that could use $env:$(Build.Repository.LocalPath)"
   env:
-         SYSTEM_ACCESSTOKEN: $(Build.ArtifactStagingDirectory)
+         SYSTEM_ACCESSTOKEN: $(Build.Repository.LocalPath)
   
 - task: SqlAzureDacpacDeployment@1
   inputs:

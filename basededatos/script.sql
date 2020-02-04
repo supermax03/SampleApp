@@ -1,5 +1,3 @@
-DROP TABLE Customer;
-GO
 CREATE TABLE Customer
 (First_Name char(50),
  Last_Name char(50),

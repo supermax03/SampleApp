@@ -72,8 +72,8 @@ steps:
 
 - bash: echo This script could use $SYSTEM_ACCESSTOKEN
   env:
-      SYSTEM_ACCESSTOKEN: $(Build.SourcesDirectory)
-- powershell: Write-Host "This is a script that could use $env:$(Build.SourcesDirectory)"
+      SYSTEM_ACCESSTOKEN: $(Build.ArtifactStagingDirectory)
+- powershell: Write-Host "This is a script that could use $env:$(Build.ArtifactStagingDirectory)"
   env:
-         SYSTEM_ACCESSTOKEN: $(Build.SourcesDirectory)
+         SYSTEM_ACCESSTOKEN: $(Build.ArtifactStagingDirectory)
   

@@ -60,11 +60,11 @@ steps:
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
 
 
-- task: OwaspZapScan@2
-  inputs:
-    ZapApiUrl: '13.68.211.84:8080'
-    ZapApiKey: '67tc5tgmosu76fs7xe7jypm4vspyhpfj2xkm6kks3me7bifbsira'
-    TargetUrl: 'https://prueba03.azurewebsites.net/'
+- #task: OwaspZapScan@2
+  #inputs:
+  #  ZapApiUrl: '13.68.211.84:8080'
+  #  ZapApiKey: '67tc5tgmosu76fs7xe7jypm4vspyhpfj2xkm6kks3me7bifbsira'
+  #  TargetUrl: 'https://prueba03.azurewebsites.net/'
 
 
 

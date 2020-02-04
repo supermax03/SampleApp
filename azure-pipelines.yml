@@ -66,6 +66,9 @@ steps:
   #  ZapApiKey: '67tc5tgmosu76fs7xe7jypm4vspyhpfj2xkm6kks3me7bifbsira'
   #  TargetUrl: 'https://prueba03.azurewebsites.net/'
 
+- task: FlywayInstaller@0
+  inputs:
+    flywayVersion: '6.2.0'
 
 
   

@@ -79,12 +79,41 @@ steps:
   
 - task: SqlAzureDacpacDeployment@1
   inputs:
-      azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
-      AuthenticationType: 'server'
-      ServerName: 'mysqlserver1000.database.windows.net'
-      DatabaseName: 'basededatos01'
-      SqlUsername: 'azureuser'
-      SqlPassword: 'Tarola30'
-      deployType: 'SqlTask'
-      SqlFile: '$(Build.ArtifactStagingDirectory)/basededatos/script.sql'
-      IpDetectionMethod: 'AutoDetect'
+    azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
+    AuthenticationType: 'server'
+    ServerName: 'mysqlserver1000.database.windows.net'
+    DatabaseName: 'basededatos01'
+    SqlUsername: 'azureuser'
+    SqlPassword: 'Tarola30'
+    deployType: 'InlineSqlTask'
+    SqlInline: |
+      DROP TABLE Customer;
+      GO
+      CREATE TABLE Customer
+      (First_Name char(50),
+       Last_Name char(50),
+       Address char(50) default 'Unknown',
+       City char(50) default 'Barcelona',
+       Country char(25)
+      );
+      GO
+      BEGIN TRAN
+         Insert into Customer
+          VALUES
+          ('Prueba','Azure','BD','BD','BD');
+          
+          Insert into Customer
+          VALUES
+          ('Prueba1','Azure1','BD1','BD1','BD1'); 
+      
+          Insert into Customer
+          VALUES
+          ('Prueba2','Azure2','BD2','BD2','BD2');
+          
+          Insert into Customer
+          VALUES
+          ('Prueba3','Azure3','BD3','BD3','BD3'); 
+      
+      GO
+      commit TRAN;
+    IpDetectionMethod: 'AutoDetect'

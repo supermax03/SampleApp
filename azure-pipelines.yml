@@ -86,5 +86,5 @@ steps:
     SqlUsername: 'azureuser'
     SqlPassword: 'Tarola30'
     deployType: 'SqlTask'
-    SqlFile: 'D:\a\1\s\SampleApp\basededatos\script.sql'
+    SqlFile: 'D:\a\1\s\basededatos\script.sql'
     IpDetectionMethod: 'AutoDetect'

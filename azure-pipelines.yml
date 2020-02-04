@@ -66,9 +66,25 @@ steps:
   #  ZapApiKey: '67tc5tgmosu76fs7xe7jypm4vspyhpfj2xkm6kks3me7bifbsira'
   #  TargetUrl: 'https://prueba03.azurewebsites.net/'
 
-- task: FlywayInstaller@0
-  inputs:
-    flywayVersion: '6.2.0'
+#- task: FlywayInstaller@0
+#  inputs:
+#    flywayVersion: '6.2.0'
 
-
+- bash: echo This script could use $SYSTEM_ACCESSTOKEN
+  env:
+      SYSTEM_ACCESSTOKEN: $(System.DefaultWorkingDirectory)
+- powershell: Write-Host "This is a script that could use $env:$(System.DefaultWorkingDirectory)"
+  env:
+         SYSTEM_ACCESSTOKEN: $(System.DefaultWorkingDirectory)
   
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
+    AuthenticationType: 'server'
+    ServerName: 'mysqlserver1000.database.windows.net'
+    DatabaseName: 'basededatos01'
+    SqlUsername: 'azureuser'
+    SqlPassword: 'Tarola30'
+    deployType: 'SqlTask'
+    SqlFile: 'D:\a\1\s\basededatos\script.sql'
+    IpDetectionMethod: 'AutoDetect'

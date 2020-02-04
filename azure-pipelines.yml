@@ -77,3 +77,14 @@ steps:
   env:
          SYSTEM_ACCESSTOKEN: $(Build.ArtifactStagingDirectory)
   
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+      azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
+      AuthenticationType: 'server'
+      ServerName: 'mysqlserver1000'
+      DatabaseName: 'basededatos01'
+      SqlUsername: 'azureuser'
+      SqlPassword: 'Tarola30'
+      deployType: 'SqlTask'
+      SqlFile: '$(Build.ArtifactStagingDirectory)/basededatos/script.sql'
+      IpDetectionMethod: 'AutoDetect'

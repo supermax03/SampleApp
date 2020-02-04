@@ -86,9 +86,7 @@ steps:
     SqlUsername: 'azureuser'
     SqlPassword: 'Tarola30'
     deployType: 'InlineSqlTask'
-    SqlInline: |
-      DROP TABLE Customer;
-      GO
+    SqlInline: |      
       CREATE TABLE Customer
       (First_Name char(50),
        Last_Name char(50),

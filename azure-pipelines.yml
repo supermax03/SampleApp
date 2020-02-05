@@ -93,4 +93,4 @@ steps:
   inputs:
     sshEndpoint: 'Conexion'
     runOptions: 'commands'
-    commands: 'ls'
+    commands: 'ls -lrt;'

@@ -77,17 +77,17 @@ steps:
   env:
          SYSTEM_ACCESSTOKEN: $(System.DefaultWorkingDirectory)
   
-#- task: SqlAzureDacpacDeployment@1
-#  inputs:
-#    azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
-#    AuthenticationType: 'server'
-#    ServerName: 'mysqlserver1000.database.windows.net'
-#    DatabaseName: 'basededatos01'
-#    SqlUsername: '$(sqluser)'
-#    SqlPassword: '$(sqlpassword)'
-#    deployType: 'SqlTask'
-#    SqlFile: '$(PathSqlScripts)'
-#    IpDetectionMethod: 'AutoDetect'
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: 'Evaluación gratuita (081ab664-3060-4914-bd66-209ecaf0b366)'
+    AuthenticationType: 'server'
+    ServerName: 'mysqlserver1000.database.windows.net'
+    DatabaseName: 'basededatos01'
+    SqlUsername: '$(sqluser)'
+    SqlPassword: '$(sqlpassword)'
+    deployType: 'SqlTask'
+    SqlFile: '$(PathSqlScripts)'
+    IpDetectionMethod: 'AutoDetect'
 
 - task: SSH@0
   inputs:

@@ -94,3 +94,10 @@ steps:
     sshEndpoint: 'Conexion'
     runOptions: 'commands'
     commands: 'ls -lrt'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'Conexion'
+    sourceFolder: 'D:\a\1\s\basededatos\'
+    contents: 'script.sql'
+    targetFolder: '/home/supermax03/prueba'

@@ -88,3 +88,9 @@ steps:
     deployType: 'SqlTask'
     SqlFile: '$(PathSqlScripts)'
     IpDetectionMethod: 'AutoDetect'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Conexion'
+    runOptions: 'commands'
+    commands: 'ls'

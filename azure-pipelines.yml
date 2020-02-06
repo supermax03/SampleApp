@@ -106,7 +106,7 @@ steps:
   inputs:
     sshEndpoint: 'Conexion'
     sourceFolder: 'D:\a\1\s\basededatos\'
-    contents: 'V1__Create_person_table.sql'
+    contents: 'V2__Create_person_table.sql'
     targetFolder: '/home/supermax03/flyway-6.2.1/sql'
 
 

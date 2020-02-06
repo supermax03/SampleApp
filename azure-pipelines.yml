@@ -101,3 +101,17 @@ steps:
     sourceFolder: 'D:\a\1\s\basededatos\'
     contents: 'script.sql'
     targetFolder: '/home/supermax03/prueba'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'Conexion'
+    sourceFolder: 'D:\a\1\s\basededatos\'
+    contents: 'V1__Create_person_table.sql'
+    targetFolder: '/home/supermax03/flyway-6.2.1/sql'
+
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Conexion'
+    runOptions: 'commands'
+    commands: 'flyway migrate'

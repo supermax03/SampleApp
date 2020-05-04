@@ -18,12 +18,12 @@ last_name  VARCHAR(50)
 
 
 
-CREATE TABLE ClientePrueba18(
+/*CREATE TABLE ClientePrueba18(
 
 first_name VARCHAR(50),
 last_name  VARCHAR(50)
 
-);
+);*/
 
 
 
@@ -34,9 +34,9 @@ last_name  VARCHAR(50)
 
 );
 
-CREATE TABLE ClientePrueba22(
+/*CREATE TABLE ClientePrueba22(
 
 first_name VARCHAR(50),
 last_name  VARCHAR(50)
 
-);
+);*/

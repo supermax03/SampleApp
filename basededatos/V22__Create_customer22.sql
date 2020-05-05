@@ -9,16 +9,9 @@ last_name  VARCHAR(50)
 INSERT INTO ClientePrueba26
 values
 (
-   1,
+   2,
    'A',
    'B'
 
 );
 COMMIT;
-INSERT INTO ClientePrueba26
-values
-( 1,
-  'A',
-  'B'
-);
-COMMIT; 

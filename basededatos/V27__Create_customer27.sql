@@ -1,11 +1,4 @@
 
-insert into ClientePrueba40 values(1,'a','b'); commit;
-insert into ClientePrueba40 values(1,'b','c');commit;
+insert into ClientePrueba40 values(3,'a','b'); 
+insert into ClientePrueba40 values(4,'b','c');
 
-CREATE TABLE ClientePrueba40(
-
-numero INTEGER PRIMARY KEY,
-first_name VARCHAR(50),
-last_name  VARCHAR(50)
-
-);

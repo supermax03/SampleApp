@@ -8,6 +8,8 @@ last_name  VARCHAR(50)
 
 );
 
+
+
 CREATE TABLE ClientePrueba51(
 
 numero INTEGER PRIMARY KEY,

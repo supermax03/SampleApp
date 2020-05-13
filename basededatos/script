@@ -1,0 +1,15 @@
+migration_dir=$1
+flyway_path=$2
+tmp_dir="temp"
+current_time=$(date +"%Y%m%d%H%M%S%3N")
+tmp_dir=$(echo $tmp_dir$current_time)
+mkdir $tmp_dir
+for filename in $(ls $migration_dir);
+do
+        echo $filename   
+        current_time=$(date +"%Y%m%d%H%M%S%3N")              
+        target_name=$( echo "V"$current_time"_"$filename)
+        cp $migration_dir/$filename $tmp_dir/$target_name
+  
+done;
+

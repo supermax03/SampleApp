@@ -3,4 +3,9 @@ CREATE TABLE IF NOT EXISTS Articulo (
      descripcion varchar(100)
 );
 
+CREATE TABLE IF NOT EXISTS Departamento (
+
+            nombre varchar(100)
+);
+
 

@@ -1,3 +1,2 @@
-DROP TABLE cliente;
-DROP TABLE  proveedor;
+DROP TABLE articulo;
 

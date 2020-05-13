@@ -1,3 +1,2 @@
-delete from cliente;
-delete from proveedor;
+delete from articulo;
 commit;

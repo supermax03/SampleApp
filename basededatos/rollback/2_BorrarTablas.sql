@@ -1,3 +1,3 @@
-DROP TABLE cliente;
-DROP TABLE  proveedor;
+DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS proveedor;
 

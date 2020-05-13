@@ -1,2 +1,2 @@
-DROP TABLE articulo;
+DROP TABLE IF EXISTS articulo;
 

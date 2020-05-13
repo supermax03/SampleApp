@@ -1,2 +1,2 @@
 DROP TABLE IF EXISTS articulo;
-
+DROP TABLE IF EXISTS departamento;
